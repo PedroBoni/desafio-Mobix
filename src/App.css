@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --main-bg-dark-gray: #EFF1F1;
+  --main-bg-light-gray: #F8F8F8;
+  --main-bg-btn: #6B7375;
+  --main-checkbox-grey: rgba(0, 0, 0, 0.54);
+}
+
+.container{
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 1000px;
+  height: calc(100% - 10%);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+input{
+  cursor: pointer;
+}
+
+.bg-darkGray{
+  background-color: var(--main-bg-dark-gray)
+}
+
+.bg-lightGray{
+  background-color: var( --main-bg-light-gray)
+}
+
+.table{
+  width: 100%;
+  display: flex;
+}
+
+.column{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.column div{
+  height: 2rem;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0.6rem 
+}
+
+.module{
+  width: 12rem;
+  margin-top: 2rem;
+}
+
+.subModule{
+  display: flex;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.datePlace{
+  width: calc(100%  / 5);
+}
+.datePlace div{
+  justify-content: center;
+}
+.btnCollapse{
+  background: none;
+  border: none;
+  height: 8px;
+  width: 14px;
+  margin-left: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.btnCollapse img{
+  width: 0.5rem;
+  transition: 300ms;
+  transform: scaleY(-1);
+}
+
+.active img{
+  transform: scaleY(1);
+  transition: 300ms;
+} 
+
+.horizontalScroll{
+  display: flex;
+  width: 100%;
+}
+
+.notCollapse{
+  flex-direction: column !important;
+  padding-left: 0 !important;
+  align-items: initial !important;
+}
+
+.collapse div{
+ display: none;
+ transition-delay: 500ms
+}
+
+.notCollapse div{
+  display: flex;
+  transition-delay: 500ms
+}
+
+.SM1{
+  height: 4rem !important;
+}
+
+.SM2{ 
+  height: 6rem !important;
+}
+
+.SM3{
+  height: 8rem !important;
+  align-items: initial !important;
+}
+
+.SM4{
+  height: 2rem !important;
+}
+
+.collapse{
+  flex-direction: column !important;
+  padding-left: 0 !important;
+  height: 0 !important;
+  align-items: initial !important;
+}
+
+.btnFinish{
+  font-family: 'Roboto', sans-serif;
+  min-height: 2.2rem;
+  width: 10rem;
+  border-radius: 1.5rem;
+  border: none;
+  background-color: #6B7375;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: center;
+  outline: none;
+  margin-top: 1rem; 
+}
+
+
+@media only screen and (max-width: 1024px) {
+  main{
+      max-width: 900px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main{
+      max-width: 700px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main {
+    height: 100%;
+    padding-bottom: 1rem;
+  }
+  main h1{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 3rem;
+    width: 100vw;
+    margin-bottom: 0rem;
+    -webkit-box-shadow: 0 0px 10px -5px #242424;
+    -moz-box-shadow:  0 0px 10px -5px #242424;
+    box-shadow: 0 0px 10px -5px #242424;
+    font-weight: 500;
+  }
+ 
+  .datePlace{
+     min-width: 6rem;
+  }
+  .horizontalScroll{
+    overflow-x: scroll; 
+  }
+}
+
+input[type=checkbox] {
+  position: relative;
+	cursor: pointer;
+}
+input[type=checkbox]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 0;
+  left: 0;
+  background-color:#DADADA;
+  border-radius: 2px;
+}
+input[type=checkbox]:checked:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 0;
+  left: 0;
+  background-color:#6B7375;
+}
+input[type=checkbox]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid var(--main-bg-light-gray);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 1.5px;
+  left: 5.4px;
+}
